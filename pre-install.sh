@@ -4,7 +4,7 @@ read -p "Provide kernel package name(linux/linux-lts/linux-zen): " kernel
 
 read -p "Provide microcode updates package name(amd-ucode/intel-ucode): " ucode
 
-pacstrap -K /mnt base base-devel $kernel linux-firmware $ucode
+pacstrap -K /mnt base $kernel linux-firmware $ucode
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
